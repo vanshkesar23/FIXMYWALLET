@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FixMyWallet Financial Case Files</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<div class="profile-corner" id="profileCorner">
+<button aria-label="Open profile menu" class="profile-trigger" id="profileTrigger" type="button">
+<div class="profile-avatar" id="profileAvatar" title="Your profile">U</div>
+<div class="profile-label" id="profileName">PROFILE</div>
+</button>
+<div class="profile-menu" id="profileMenu">
+<div class="profile-menu-head" id="profileEmail">INVESTIGATOR PROFILE</div>
+<button id="profileDashboard">⌂ DASHBOARD</button>
+<button id="profileCases">◈ MY CASES</button>
+<button id="profileLogout">↗ LOG OUT</button>
+</div>
+</div>
+<!-- LOGIN / SIGN UP -->
+<div class="auth-user" id="authUser"><span id="authUserName"></span><button id="logoutBtn">LOG OUT</button></div>
+<div class="auth-overlay" id="authOverlay">
+<div class="auth-shell">
+<div class="auth-brand">
+<div class="auth-logo">fix<span>my</span>wallet</div>
+<div class="auth-brand-main">
+<div class="auth-kicker">PERSONAL FINANCIAL INVESTIGATION</div>
+<h1>KNOW WHERE.<br/>KNOW WHY.<br/>FIX WHAT'S NEXT.</h1>
+<p>Your money leaves patterns. FixMyWallet helps you investigate them, understand your habits and make smarter decisions one case at a time.</p>
+</div>
+<div class="auth-proof"><span>SECURE DEMO ACCESS</span><span>YOUR DATA STAYS LOCAL</span><span>TEAM NEXORA</span></div>
+</div>
+<div class="auth-panel">
+<div class="auth-box">
+<button class="auth-close" id="authClose" title="Close">×</button>
+<div class="auth-tabs">
+<button class="auth-tab active" data-auth="login">LOG IN</button>
+<button class="auth-tab" data-auth="signup">CREATE ACCOUNT</button>
+</div>
+<form class="auth-form active" id="loginForm">
+<h2 class="auth-title">WELCOME BACK.</h2>
+<p class="auth-sub">Continue your financial investigation.</p>
+<div class="auth-field"><label>EMAIL ADDRESS</label><input id="loginEmail" placeholder="you@example.com" required="" type="email"/></div>
+<div class="auth-field"><label>PASSWORD</label><input id="loginPassword" placeholder="Enter your password" required="" type="password"/></div>
+<button class="auth-submit" type="submit">CONTINUE INVESTIGATION →</button>
+<div class="auth-success" id="loginSuccess"></div>
+<div class="auth-note">Demo authentication is stored locally in your browser.</div>
+</form>
+<form class="auth-form" id="signupForm">
+<h2 class="auth-title">OPEN YOUR CASE.</h2>
+<p class="auth-sub">Create your FixMyWallet investigator profile.</p>
+<div class="auth-field"><label>FULL NAME</label><input id="signupName" placeholder="Your name" required="" type="text"/></div>
+<div class="auth-field"><label>EMAIL ADDRESS</label><input id="signupEmail" placeholder="you@example.com" required="" type="email"/></div>
+<div class="auth-field"><label>PASSWORD</label><input id="signupPassword" minlength="4" placeholder="Create a password" required="" type="password"/></div>
+<button class="auth-submit" type="submit">CREATE ACCOUNT →</button>
+<div class="auth-success" id="signupSuccess"></div>
+<div class="auth-note">For the hackathon demo, account data is saved locally. A real backend can replace this layer later.</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<button class="tx-trigger" id="transactionsBtn" title="View Transactions">
+<svg fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="14" rx="2" width="18" x="3" y="5"></rect><path d="M3 10h18"></path><path d="M7 15h3"></path></svg><span>Transactions</span></button>
+<nav>
+<div class="logo">fix<span>my</span>wallet</div>
+<div class="navlinks">
+<a href="#cases">CASES</a><a href="#dna">SPENDING DNA</a><a href="#leaks">MONEY LEAKS</a><a href="#mission">MISSION</a><a href="#about">ABOUT</a>
+</div>
+</nav>
+<section class="hero grid">
+<div class="file dark f1"><div class="meta">CASE #024 · SUSPICIOUS</div><h3>THE MIDNIGHT<br/>FOOD DELIVERY</h3><div class="amount">₹487</div><small>SWIGGY · 11:48 PM</small></div>
+<div class="file blue f2"><div class="meta">PATTERN DETECTED</div><h3>68% OF IMPULSE SPENDING HAPPENS AFTER 8 PM.</h3><small>THIS MONTH'S EVIDENCE →</small></div>
+<div class="file light f3"><div class="meta">MONEY LEAK</div><h3>₹6,240 QUIETLY LEAVING YOUR WALLET.</h3></div>
+<div class="file dark f4"><div class="meta">AI CLUE</div><h3>3 SIMILAR FOOD ORDERS AFTER 10 PM.</h3><small>EST. IMPACT ₹1,948 / MONTH</small></div>
+<div class="marker m1">×</div><div class="marker m2">↗</div>
+<div class="hero-copy">
+<div class="eyebrow">A FINANCIAL INVESTIGATION SYSTEM</div>
+<h1>FIX<span class="blue">MY</span><br/>WALLET</h1>
+<p>Your money left clues. We found them.</p>
+<div class="ctas"><button class="cta primary">START INVESTIGATING →</button><button class="cta">VIEW ALL CASES</button></div>
+</div>
+</section>
+<section class="section grid">
+<div class="biglabel">THE EVIDENCE</div>
+<div class="section-intro">
+<div class="meta">01 / THIS MONTH</div>
+<h2>YOUR MONEY<br/>LEFT A TRAIL.</h2>
+<p>We turned your transactions into evidence, patterns and financial case files.</p>
+</div>
+<div class="statrow">
+<div class="stat"><div class="num">₹42,850</div><p>MONEY<br/>INVESTIGATED</p></div>
+<div class="stat"><div class="num">17</div><p>CASES<br/>FOUND</p></div>
+<div class="stat"><div class="num">₹6,240</div><p>POTENTIAL<br/>LEAKAGE</p></div>
+</div>
+</section>
+<section class="section grid" id="cases">
+<div class="biglabel">CASE FILES</div>
+<div class="section-intro"><div class="meta">02 / ACTIVE INVESTIGATION</div><h2>FOLLOW<br/>THE CLUES.</h2></div>
+<div class="case-stage">
+<div class="clue"><div class="meta">AI CLUE #03</div><h4>THREE SIMILAR INCIDENTS DETECTED.</h4><small>ALL AFTER 10 PM</small></div>
+<div class="maincase">
+<div class="meta">CASE #024   /   STATUS: IMPULSE</div>
+<div class="case-title">THE MIDNIGHT<br/>FOOD DELIVERY</div>
+<div class="case-grid"><div><small>TRANSACTION</small><br/><b>₹487</b></div><div><small>MERCHANT</small><br/><b>Swiggy</b></div><div><small>WHEN</small><br/><b>Friday · 11:48 PM</b></div><div><small>CATEGORY</small><br/><b>Food &amp; Dining</b></div></div>
+</div>
+<div class="impact"><div class="meta">ESTIMATED MONTHLY IMPACT</div><strong>₹1,948</strong><p>What could this habit cost you?</p></div>
+</div>
+</section>
+<section class="section scratch-section grid" id="scratch">
+<div class="biglabel">CLASSIFIED</div>
+<div class="section-intro">
+<div class="meta" style="color:#7390ff">02.5 / SIGNATURE INTERACTION</div>
+<h2>SCRATCH.<br/>FIND.<br/>UNDERSTAND.</h2>
+<p>Evidence isn't handed to you. Uncover the story behind your spending, one clue at a time.</p>
+</div>
+<div class="scratch-demo">
+<div class="scratch-shell">
+<div class="scratch-header">
+<div><div class="meta">FINANCIAL CASE FILE · CASE #024</div><h3>THE MIDNIGHT FOOD DELIVERY</h3></div>
+<div style="text-align:right"><div class="meta">TRANSACTION</div><div style="font-size:30px;font-weight:900">₹487</div></div>
+</div>
+<div class="progress-wrap"><span>INVESTIGATION PROGRESS</span><div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div><span id="progressText">0%</span></div>
+<div class="scratch-area" id="scratchArea">
+<div class="evidence-layer">
+<div class="evidence-grid">
+<div class="evidence" data-stage="1"><small>LAYER 01 · TRANSACTION</small><b>₹487 · Swiggy</b><small>FRIDAY · 11:48 PM</small></div>
+<div class="evidence" data-stage="2"><small>LAYER 02 · CONTEXT</small><b>LATE-NIGHT PURCHASE</b><small>3 SIMILAR INCIDENTS THIS MONTH</small></div>
+<div class="evidence" data-stage="3"><small>LAYER 03 · PATTERN</small><b>68% OF FOOD DELIVERY HAPPENS AFTER 9 PM.</b></div>
+<div class="evidence" data-stage="4"><small>LAYER 04 · ANNUAL IMPACT</small><strong>₹18,756 / YEAR</strong><small>IF THIS PATTERN CONTINUES</small></div>
+</div>
+</div>
+<canvas id="scratchCanvas"></canvas>
+</div>
+<div class="scratch-done" id="scratchDone">
+<div class="meta">INVESTIGATION COMPLETE · CASE #024</div>
+<h2>CASE SOLVED.</h2>
+<div style="font-size:24px;font-weight:800;margin-bottom:20px">THE MIDNIGHT FOOD DELIVERY</div>
+<div class="solve-chain"><span>₹487</span> ↓ <span>3 similar purchases</span> ↓ <span>₹1,563/month</span> ↓ <b>₹18,756/year</b></div>
+<div class="fixbox"><div class="meta">THE FIX</div><p>Set a late-night food budget of ₹300 and prepare an alternative before 10 PM.</p></div>
+<div class="scratch-actions"><button disabled="" id="fixHabitBtn">FIX THIS HABIT</button><button disabled="" id="watchCaseBtn">KEEP WATCHING</button><button id="nextCase">CASE #025 →</button></div>
+</div>
+</div>
+<button class="replay" id="replayScratch">↻ REPLAY INVESTIGATION</button>
+</div>
+</section>
+<section class="section grid" id="dna">
+<div class="biglabel">BEHAVIOUR</div>
+<div class="section-intro"><div class="meta">03 / SPENDING DNA</div><h2>YOU DON'T JUST<br/>SPEND MONEY.</h2><p>Your transactions reveal behaviour. This is your financial personality.</p></div>
+<div class="dna-wrap">
+<div><h2 style="font-size:clamp(48px,6vw,88px);line-height:.9;letter-spacing:-.07em;margin:0">YOUR<br/>SPENDING<br/>DNA.</h2><p style="font-size:17px;line-height:1.6">You spend most when convenience is involved, especially during late evenings.</p></div>
+<div class="dna-grid">
+<div class="dna-card"><div class="pct">38%</div><h3>CONVENIENCE SEEKER</h3><small>PRIMARY TRAIT</small></div>
+<div class="dna-card"><div class="pct">24%</div><h3>IMPULSE BUYER</h3><small>PATTERN DETECTED</small></div>
+<div class="dna-card"><div class="pct">21%</div><h3>PLANNER</h3><small>CONTROLLED SPENDING</small></div>
+<div class="dna-card"><div class="pct">17%</div><h3>DEAL HUNTER</h3><small>PRICE SENSITIVE</small></div>
+</div>
+</div>
+</section>
+<section class="section grid" id="leaks">
+<div class="biglabel">MONEY LEAKS</div>
+<div class="section-intro"><div class="meta">04 / FINANCIAL LEAKAGE</div><h2>YOUR MONEY<br/>IS ESCAPING.</h2><p>Not through one big mistake. Through small patterns repeated again and again.</p></div>
+<div class="leaks">
+<div class="leak"><small>LEAK #01</small><span>FOOD DELIVERY</span><span class="price">₹2,840</span></div>
+<div class="leak"><small>LEAK #02</small><span>IMPULSE SHOPPING</span><span class="price">₹1,420</span></div>
+<div class="leak"><small>LEAK #03</small><span>RIDE HAILING</span><span class="price">₹1,180</span></div>
+<div class="leak"><small>LEAK #04</small><span>UNUSED SUBSCRIPTIONS</span><span class="price">₹899</span></div>
+</div>
+</section>
+<section class="section grid" id="appstate">
+<div class="biglabel">LIVE CASE DATA</div>
+<div class="section-intro"><div class="meta">05 / INVESTIGATION STATUS</div><h2>YOUR CASE<br/>CONTROL ROOM.</h2><p>Every action updates the same investigation record across FixMyWallet.</p></div>
+<div class="statrow">
+<div class="stat"><div class="num" id="dashboardResolved">0</div><p>CASES<br/>RESOLVED</p></div>
+<div class="stat"><div class="num" id="dashboardWatching">0</div><p>CASES<br/>UNDER WATCH</p></div>
+<div class="stat"><div class="num" id="dashboardXP">0</div><p>INVESTIGATION<br/>XP</p></div>
+</div>
+<div style="margin-top:55px;position:relative;z-index:2">
+<div class="meta" style="font-family:'DM Mono';font-size:11px;letter-spacing:2px;color:#315cff;margin-bottom:18px">CASE BOARD · LIVE STATUS</div>
+<div id="caseBoard" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px"></div>
+</div>
+<div style="margin-top:45px;position:relative;z-index:2">
+<div class="meta" style="font-family:'DM Mono';font-size:11px;letter-spacing:2px;color:#315cff;margin-bottom:18px">RESOLVED CASE HISTORY</div>
+<div id="resolvedHistory" style="border-top:1px solid #111318"></div>
+</div>
+<div style="margin-top:45px;position:relative;z-index:2">
+<div class="meta" style="font-family:'DM Mono';font-size:11px;letter-spacing:2px;color:#315cff;margin-bottom:18px">FINANCIAL INSIGHT · UPDATED LIVE</div>
+<div id="financialInsight" style="font-size:clamp(25px,3vw,45px);font-weight:800;letter-spacing:-2px;max-width:900px">Investigate a case to uncover what can be fixed.</div>
+</div>
+</section>
+<section class="about-section grid" id="about"> <div class="biglabel">NEXORA</div> <div class="about-top"> <div class="about-kicker">THE TEAM BEHIND THE INVESTIGATION</div> <h2>BUILT TO<br/>FIX THE WHY.</h2> <p class="about-intro">FixMyWallet was built by Team Nexora with one belief: financial awareness should feel less like filling spreadsheets and more like discovering the story behind your decisions.</p> </div> <div class="team-grid"> <article class="team-card" data-no="01"> <div class="team-role">BACKEND &amp; OPERATIONS LEAD</div> <div class="team-name">VANSH<br/>KESAR</div> <p class="team-desc">Drives the product logic, application workflows and operational direction making sure every interaction connects to a meaningful financial outcome.</p> </article> <article class="team-card" data-no="02"> <div class="team-role">DATABASE &amp; RESEARCH LEAD</div> <div class="team-name">KESHAV<br/>SINGHAL</div> <p class="team-desc">Shapes the data foundation and research behind FixMyWallet, turning real spending behaviour into evidence, patterns and useful insights.</p> </article> <article class="team-card" data-no="03"> <div class="team-role">FRONTEND &amp; UI LEAD</div> <div class="team-name">RAJ PRATAP<br/>SINGH</div> <p class="team-desc">Builds the interactive product experience and interface system, bringing the financial investigation journey to life across every screen.</p> </article> <article class="team-card" data-no="04"> <div class="team-role">VISUAL DESIGN &amp; GRAPHICS LEAD</div> <div class="team-name">ACHYUT<br/>MAGOTRA</div> <p class="team-desc">Creates the visual language, graphics and identity that give FixMyWallet its distinctive investigative personality without losing fintech credibility.</p> </article> </div> <div class="nexora-signature"> <div><div class="mini">A HACKATHON PROJECT BY</div><strong>TEAM NEXORA</strong></div> <div class="mini">INVESTIGATE SPENDING · UNDERSTAND PATTERNS · FIX HABITS</div> </div>
+</section>
+<section class="section final" id="mission">
+<div class="eyebrow">CASE CLOSED? NOT YET.</div>
+<h2>FIX YOUR<br/>WALLET.</h2>
+<p>You now know where your money went. The real investigation is understanding why and changing what happens next.</p>
+<button class="cta">START YOUR FIRST CASE →</button>
+<div class="footer-credit">FIX YOUR WALLET · BY TEAM NEXORA</div>
+</section>
+
+
+
+
+<div class="tx-modal" id="txModal">
+<div class="tx-panel">
+<div class="tx-head"><div><div class="meta">BANKING DATA · CONNECTED TO FIXMYWALLET</div><h2>Transactions.</h2><p style="margin:0;color:#666">Every transaction feeds your financial investigation.</p></div><button class="tx-close" id="txClose">×</button></div>
+<div class="tx-summary">
+<div class="tx-sum"><small>MONEY IN</small><b class="credit" id="txMoneyIn">₹0</b></div>
+<div class="tx-sum"><small>MONEY OUT</small><b class="debit" id="txMoneyOut">₹0</b></div>
+<div class="tx-sum"><small>NET FLOW</small><b id="txNet">₹0</b></div>
+<div class="tx-sum"><small>THIS MONTH</small><b id="txCount">0 TXNS</b></div>
+</div>
+<div class="tx-addbar" id="txAddBar">
+<button class="primary" type="button" id="addTxBtn" onclick="window.FMWTx&&window.FMWTx.openForm()">+ ADD TRANSACTION</button>
+<button type="button" id="importStmtBtn" onclick="window.FMWTx&&window.FMWTx.pickCSV()">ADD BANK STATEMENT (CSV)</button>
+<input type="file" id="csvInput" accept=".csv,text/csv" style="display:none" onchange="window.FMWTx&&window.FMWTx.importCSV(this.files[0])">
+</div>
+<div class="tx-form" id="txForm">
+<div style="font-weight:900;margin-bottom:12px;letter-spacing:1px">ADD NEW TRANSACTION</div>
+<div class="tx-form-grid">
+<input id="fDate" type="datetime-local"><input id="fMerchant" placeholder="Merchant / Description">
+<input id="fAmount" type="number" min="1" step="0.01" placeholder="Amount">
+<select id="fType"><option value="DEBIT">DEBIT (Money Out)</option><option value="CREDIT">CREDIT (Money In)</option><option value="TRANSFER">TRANSFER</option></select>
+<select id="fCategory"><option>Food</option><option>Shopping</option><option>Transportation</option><option>Bills</option><option>Healthcare</option><option>Entertainment</option><option>Income</option><option>Transfers</option><option>Other</option></select>
+<input id="fMethod" placeholder="Payment method (UPI/Card/Bank)">
+<textarea id="fNotes" placeholder="Optional notes" style="grid-column:1/-1"></textarea>
+</div>
+<div style="display:flex;gap:10px;margin-top:12px"><button class="primary" type="button" id="saveTxBtn" onclick="window.FMWTx&&window.FMWTx.save()">SAVE TRANSACTION</button><button type="button" onclick="window.FMWTx&&window.FMWTx.closeForm()">CANCEL</button></div>
+</div>
+<div class="tx-controls">
+<input id="txSearch" placeholder="Search transactions..." type="search"/>
+<input id="txFrom" type="date"/><input id="txTo" type="date"/>
+<input id="txMin" placeholder="Min ₹" type="number"/><input id="txMax" placeholder="Max ₹" type="number"/>
+<select id="txSort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="high">Highest amount</option><option value="low">Lowest amount</option></select>
+</div>
+<div class="tx-controls" id="txFilters"></div>
+<div class="tx-table" id="txList"></div>
+<div class="tx-detail" id="txDetail"></div>
+</div>
+</div>
+
+
+<div aria-hidden="true" class="inv-overlay" id="investigationOverlay">
+<div class="inv-window">
+<div class="inv-top">
+<div><div class="meta">FIXMYWALLET · LIVE INVESTIGATION</div><b id="invTopLabel">CASE #024</b></div>
+<button aria-label="Close investigation" class="inv-close" id="invClose">×</button>
+</div>
+<div class="inv-body">
+<div class="inv-progress"><div id="invProgressFill"></div></div>
+<div class="inv-step active" data-step="0">
+<div class="inv-kicker">ACTIVE CASE FILE</div>
+<h2 class="inv-title">THE MIDNIGHT<br/>FOOD DELIVERY.</h2>
+<p style="font-size:18px;line-height:1.6;max-width:650px">A ₹487 transaction has been flagged. This is not just about what you spent investigate the clues to understand why it happened.</p>
+<div class="inv-clue revealed"><small>TRANSACTION</small><b>₹487 · SWIGGY · FRIDAY 11:48 PM</b></div>
+<div class="inv-actions">
+<button class="primary" id="invStartBtn">START 1ST CASE →</button>
+</div>
+</div>
+<div class="inv-step" data-step="1">
+<div class="inv-kicker">CLUE 01 / 04 · CLICK TO INSPECT</div>
+<h2 class="inv-title">WHEN DID<br/>IT HAPPEN?</h2>
+<div class="inv-clue" data-clue="1"><small>CLICK TO REVEAL EVIDENCE</small><b>TIME &amp; CONTEXT</b><div class="detail">Friday · 11:48 PM. The purchase happened during a repeated late-night spending window.</div></div>
+<div class="inv-actions"><button id="invBack1">← BACK</button><button class="primary inv-next" disabled="">NEXT CLUE →</button></div>
+</div>
+<div class="inv-step" data-step="2">
+<div class="inv-kicker">CLUE 02 / 04 · CLICK TO INSPECT</div>
+<h2 class="inv-title">WHY THIS<br/>PURCHASE?</h2>
+<div class="inv-clue" data-clue="2"><small>CLICK TO REVEAL EVIDENCE</small><b>POSSIBLE TRIGGER</b><div class="detail">Late-night convenience. Similar food orders were made when no meal was prepared in advance.</div></div>
+<div class="inv-actions"><button class="inv-back">← BACK</button><button class="primary inv-next" disabled="">NEXT CLUE →</button></div>
+</div>
+<div class="inv-step" data-step="3">
+<div class="inv-kicker">CLUE 03 / 04 · CLICK TO INSPECT</div>
+<h2 class="inv-title">THE PATTERN<br/>REPEATS.</h2>
+<div class="inv-clue" data-clue="3"><small>CLICK TO REVEAL EVIDENCE</small><b>PATTERN DETECTED</b><div class="detail">3 similar food orders occurred after 10 PM this month. 68% of food-delivery impulse spending happens at night.</div></div>
+<div class="inv-actions"><button class="inv-back">← BACK</button><button class="primary inv-next" disabled="">NEXT CLUE →</button></div>
+</div>
+<div class="inv-step" data-step="4">
+<div class="inv-kicker">CLUE 04 / 04 · CLICK TO INSPECT</div>
+<h2 class="inv-title">WHAT IS IT<br/>COSTING YOU?</h2>
+<div class="inv-clue" data-clue="4"><small>CLICK TO REVEAL EVIDENCE</small><b>FINANCIAL IMPACT</b><div class="detail">Current pattern: ₹1,563/month. If it continues for 12 months, estimated impact: ₹18,756/year.</div></div>
+<div class="inv-actions"><button class="inv-back">← BACK</button><button class="primary" disabled="" id="invCompleteBtn">COMPLETE INVESTIGATION ✓</button></div>
+</div>
+<div class="inv-step" data-step="5">
+<div class="inv-kicker">INVESTIGATION COMPLETE</div>
+<h2 class="inv-title">CASE<br/>UNDERSTOOD.</h2>
+<div class="inv-reward">
+<div class="meta">REWARD UNLOCKED</div>
+<strong>+20 XP</strong>
+<p>You followed every clue and uncovered the behaviour behind this transaction.</p>
+</div>
+<div class="inv-clue revealed"><small>RESULT</small><b>THE PATTERN: LATE-NIGHT CONVENIENCE SPENDING</b><div class="detail">Recommendation: prepare a quick alternative before 10 PM and set a ₹300 late-night food limit.</div></div>
+<div class="inv-actions"><button id="invToScratch">OPEN FULL CASE FILE →</button><button class="primary" id="invDashboard">RETURN TO DASHBOARD</button></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cases-overlay" id="casesOverlay">
+<div class="cases-wrap">
+<div class="cases-list-view" id="casesListView">
+<div class="cases-head"><div><div class="meta">FINANCIAL INVESTIGATION ARCHIVE</div><h2>All Cases.</h2><p>Choose a financial mystery. Follow the clues. Understand the pattern.</p></div><button class="cases-back" id="casesBack">← BACK TO DASHBOARD</button></div>
+<div class="league-panel" id="leaguePanel">
+<div class="league-kicker">🕵️ FINANCIAL DETECTIVE LEAGUE</div>
+<div class="league-row">
+<div><div class="league-rank" id="leagueRank">ROOKIE DETECTIVE</div><div class="league-meta" id="leagueLevelText">LEVEL 1 · 0 / 500 XP</div></div>
+<div style="text-align:right"><div class="league-meta">INVESTIGATION STREAK</div><div style="font-size:28px;font-weight:900">🔥 <span id="leagueStreak">0</span> DAYS</div></div>
+</div>
+<div class="xp-track"><div class="xp-fill" id="leagueXpFill"></div></div>
+<div class="league-stats">
+<div class="league-stat"><b id="leagueXp">0</b><span>TOTAL XP</span></div>
+<div class="league-stat"><b class="coin">🪙 <span id="leagueCoins">0</span></b><span>FIXCOINS</span></div>
+<div class="league-stat"><b id="leagueSolved">0</b><span>CASES SOLVED</span></div>
+<div class="league-stat"><b id="leagueAvailable">1</b><span>MISSIONS OPEN</span></div>
+</div>
+</div>
+<div class="game-map">
+<div class="daily-mission">
+<div class="mission-kicker">TODAY'S MISSION</div>
+<h3>Find one unnecessary expense.</h3>
+<p>Inspect your transactions and identify one spending habit worth fixing.</p>
+<div class="mission-reward">REWARD: +100 XP · +10 FIXCOINS</div>
+<button class="mission-btn" id="dailyMissionBtn">START DAILY MISSION →</button>
+</div>
+<div class="badge-vault">
+<div class="mission-kicker">BADGE VAULT</div>
+<h3>Detective Badges</h3>
+<div class="badge-list" id="badgeList"></div>
+</div>
+</div>
+<div class="cases-grid" id="casesGrid"></div>
+</div>
+<div class="case-detail-view" id="caseDetailView"></div>
+</div>
+</div>
+<div class="game-toast" id="gameToast"></div>
+<div class="case-game-overlay" id="caseGameOverlay"><div class="case-game" id="caseGame"></div></div>
+
+
+<!-- Hackathon Demo Experience -->
+<button class="demo-fab" id="demoJourneyBtn">◈ BEGIN INVESTIGATION</button>
+<div class="demo-overlay" id="demoOverlay">
+<div class="demo-modal">
+<button class="demo-close" id="demoClose">×</button>
+<div class="kicker">FIXMYWALLET · GUIDED INVESTIGATION</div>
+<h2>OPEN THE<br/>CASE FILE.</h2>
+<div class="demo-step active"><b>01</b> Transaction appears</div>
+<div class="demo-step"><b>02</b> AI detects suspicious pattern</div>
+<div class="demo-step"><b>03</b> Financial case is generated</div>
+<div class="demo-step"><b>04</b> Scratch to uncover evidence</div>
+<div class="demo-step"><b>05</b> Solve the investigation</div>
+<div class="demo-step"><b>06</b> Fix habit → XP → healthier wallet</div>
+<button class="btn primary" id="startDemoFlow" style="margin-top:25px">BEGIN INVESTIGATION →</button>
+</div>
+</div>
+<div class="impact-toast" id="impactToast">
+<div class="kicker" style="color:#8ca5ff">HABIT INTERVENTION SUCCESSFUL</div>
+<h3>YOUR WALLET GOT HEALTHIER.</h3>
+<div class="impact-stats"><div>₹1,563<br/><small>/ MONTH IDENTIFIED</small></div><div>₹18,756<br/><small>/ YEAR POTENTIAL</small></div></div>
+<div>+250 XP · +50 FIXCOINS · 🌳 FOOD BRANCH IMPROVED</div>
+</div>
+
+
+<!-- FINAL FUNCTIONALITY AUDIT LAYER -->
+<div class="engage-panel" id="engagePanel">
+<div class="engage-kicker">HEALTHY PROGRESS SYSTEM</div><h3>DETECTIVE LEAGUE</h3>
+<div id="gardenAlert"></div>
+<div id="squadBoard"></div>
+<div class="cliffhanger" id="cliffhangerBox"></div>
+<button class="share-case-btn" id="shareCaseBtn">EXPORT LAST CASE CARD ↗</button>
+</div>
+<button class="engage-fab" id="engageFab">◈ LEAGUE</button>
+<div class="milestone-overlay" id="milestoneOverlay"><div class="milestone-card"><div class="burst" id="milestoneIcon">✦</div><div class="engage-kicker">MILESTONE UNLOCKED</div><h2 id="milestoneTitle">CASE CLOSED</h2><p id="milestoneText"></p><button id="milestoneClose">CONTINUE</button></div></div>
+<button class="xp-tool-fab" id="xpToolFab">✦ USE XP</button>
+<button class="memory-bottle" id="memoryBottle" title="Your month in a bottle">🧪</button>
+<div class="xp-tools" id="xpTools">
+<div class="memory-kicker">DETECTIVE RESOURCE SYSTEM</div><h3>XP IS A TOOL.</h3>
+<div class="xp-balance" id="xpToolBalance">0 XP</div>
+<p style="font-size:13px;line-height:1.5;color:#666">Spend earned investigation experience strategically. XP used here is permanently deducted.</p>
+<div class="xp-tool"><b>🧩 CASE ASSIST — 75 XP</b><br/><small>Removes one wrong option from your next challenge question.</small><br/><button id="buyAssist">USE 75 XP</button></div>
+<div class="xp-tool"><b>🔥 STREAK RESTORE — 150 XP</b><br/><small>Repair your most recently broken streak. Limited to one restore per 30 days.</small><br/><button id="restoreStreak">RESTORE STREAK</button></div>
+</div>
+<div class="memory-overlay" id="memoryOverlay"><div class="memory-story"><button class="memory-close" id="memoryClose">×</button><div class="memory-kicker">THE MEMORY BOTTLE · YOUR MONTH IN MOTION</div><h2 id="storyTitle">YOUR MONEY<br/>LEFT A STORY.</h2><div class="story-screen" id="storyScreen"></div><div class="story-controls"><button id="storyNext">NEXT →</button></div><div class="story-progress"><i id="storyProgress"></i></div></div></div>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
+
+<div class="voucher-modal" id="voucherModal"><div class="voucher-card"><div class="memory-kicker">REWARD VAULT · DEMO REDEMPTION</div><h2 id="voucherTitle">REWARD UNLOCKED</h2><p id="voucherText">Your prototype reward has been added to this demo wallet.</p><div class="voucher-code" id="voucherCode">DEMO-XXXX</div><p style="font-size:11px;color:#777;line-height:1.5">This is a hackathon prototype voucher, not a live commercial coupon.</p><button id="voucherClose">DONE</button></div></div>
+<button class="evidence-vault-btn" id="evidenceVaultBtn" style="display:none">🔒 EVIDENCE VAULT</button>
+<div class="vault-overlay" id="vaultOverlay"><div class="vault"><div class="vault-head"><div><div class="memory-kicker">REWARD SYSTEM · PROTOTYPE</div><h2>EVIDENCE VAULT</h2><span class="key" id="vaultBalance">0 XP · 0 KEYS</span></div><button class="vault-close" id="vaultClose">× CLOSE</button></div><div class="vault-tabs"><button class="vault-tab active" data-vault="direct">DIRECT REWARDS</button><button class="vault-tab" data-vault="mystery">CLASSIFIED PACKS</button><button class="vault-tab" data-vault="history">MY EVIDENCE</button></div>
+<div class="vault-pane active" id="vault-direct"><div class="reward-grid"><div class="reward-card"><b>☕ Café Break</b><small>Demo partner benefit · predictable redemption.</small><strong>500 XP</strong><button data-cost="500" data-direct="Café Break">REDEEM</button></div><div class="reward-card"><b>🚕 Move Smart</b><small>Demo transport benefit for the prototype vault.</small><strong>750 XP</strong><button data-cost="750" data-direct="Move Smart">REDEEM</button></div><div class="reward-card"><b>🛒 Smart Shop</b><small>Higher-value demo partner reward.</small><strong>1200 XP</strong><button data-cost="1200" data-direct="Smart Shop">REDEEM</button></div></div><div class="vault-note">Production integration: this UI can connect to a loyalty/reward provider. Demo codes are intentionally labelled prototype-only.</div></div>
+<div class="vault-pane" id="vault-mystery"><div class="pack"><div class="memory-kicker" style="color:#91a7ff">ONE GUARANTEED REWARD INSIDE</div><h3 style="font-size:30px;margin:12px">CLASSIFIED EVIDENCE PACK</h3><p>Unlock with XP + an Evidence Key. Keys come from meaningful financial actions, not app opens.</p><div class="cost">900 XP + 🔑 1 KEY</div><button class="pack-open" id="openPack">UNSEAL &amp; SCRATCH</button><div class="odds">TRANSPARENT ODDS · COMMON 70% · RARE 25% · LEGENDARY 5% · GUARANTEED MINIMUM REWARD</div></div><div class="scratch-zone" id="scratchZone" style="display:none"><div class="scratch-reward" id="scratchReward"></div><div class="scratch-cover" id="scratchCover">SCRATCH / CLICK TO REVEAL<br/><small>ONE PACK. ONE GUARANTEED REWARD.</small></div></div></div>
+<div class="vault-pane" id="vault-history"><div class="reward-history" id="rewardHistory"></div></div></div></div>
+
