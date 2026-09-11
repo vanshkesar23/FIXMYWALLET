@@ -1143,3 +1143,31 @@ window.FMWTx={
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',bindVault); else bindVault();
 })();
+
+// PATCH: reliable Transactions button initialization
+(function () {
+  'use strict';
+  function bindTransactions() {
+    const btn = document.getElementById('transactionsBtn');
+    const modal = document.getElementById('txModal');
+    if (!btn || !modal || btn.dataset.txBound === '1') return;
+    btn.dataset.txBound = '1';
+    btn.type = 'button';
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      modal.classList.add('open');
+      if (typeof window.FMWTx?.render === 'function') {
+        window.FMWTx.render();
+      }
+    });
+  }
+
+  // Run after the entire DOM exists, and again in case another module renders later.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bindTransactions, { once: true });
+  } else {
+    bindTransactions();
+  }
+  window.addEventListener('load', bindTransactions, { once: true });
+})();
